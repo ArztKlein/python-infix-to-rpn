@@ -36,3 +36,15 @@ class InfixToRPN:
             elif(x == ")"):
                 while True:
                     o2 = operator_stack[-1]
+                    if(o2 == "("):
+                        operator_stack.pop(-1)
+                        break
+
+                    output_queue.append(o2)
+                    operator_stack.pop(-1)
+
+        for x in list(reversed(operator_stack.copy())):
+            # If the operator token on the top of the stack is a parenthesis, then there are mismatched parentheses.
+            output_queue.append(x)
+
+        return " ".join(output_queue)
