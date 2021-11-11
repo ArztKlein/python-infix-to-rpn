@@ -5,6 +5,8 @@ class InfixToRPN:
     
     @staticmethod
     def convert(expression):
+        """ Operators and operands must be split by spaces. """
+        
         expression = expression.split(" ")
 
         operators_precedence = {"^":4, "/": 3, "*": 3, "+": 2, "-": 2}
