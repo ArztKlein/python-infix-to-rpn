@@ -1,5 +1,5 @@
 # python-infix-to-rpn
-Infix to Reverse Polish Notation using Python.
+Infix to Reverse Polish Notation (Postfix) using Python.
 
 ## Usage
 Each number and operator must be seperated by a space.
